@@ -127,3 +127,9 @@ class TokenPayload(SQLModel):
 class NewPassword(SQLModel):
     token: str
     new_password: str = Field(min_length=8, max_length=128)
+
+
+class AppStats(SQLModel):
+    total_users: int
+    active_users: int
+    total_items: int
